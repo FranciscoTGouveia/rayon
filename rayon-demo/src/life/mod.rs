@@ -82,8 +82,8 @@ impl Board {
 
         Board {
             board: new_board,
-            born: self.born.clone(),
-            survive: self.survive.clone(),
+            born: self.born,
+            survive: self.survive,
             rows: self.rows,
             cols: self.cols,
         }

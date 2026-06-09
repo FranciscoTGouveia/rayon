@@ -42,7 +42,7 @@ fn split_tour<'s>(scope: &Scope<'s>, solver: &'s SolverCx<'s>, element: Arc<Tour
                     len: element.len + 1,
                     prefix_weight,
                     visited,
-                    previous: Some(element.clone()),
+                    previous: Some(element),
                 });
                 solver.enqueue(next_tour);
                 scope.spawn(move |s| step(s, solver));
